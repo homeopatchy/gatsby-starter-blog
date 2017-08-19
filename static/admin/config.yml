@@ -1,0 +1,18 @@
+backend:
+  name: github
+  repo: homeopatchy/gatsby-starter-blog
+  branch: master
+
+media_folder: "assets/uploads"
+
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "src/pages/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Path", name: "path", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
